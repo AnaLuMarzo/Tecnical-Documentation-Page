@@ -1,0 +1,89 @@
+/* CSS files add styling rules to your content */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3em;
+  /*margin: 3em;*/
+  background-color: #eee;
+}
+
+:root {
+  --nav-font-weight: bold;
+  --nav-list-style: none;
+  --nav-padding: 10px 15px;
+  --nav-color-text: black;
+}
+
+#navbar li {
+  text-decoration: var(--nav-list-style);
+  font-weight: var(--nav-font-weight);
+  display: block;
+  list-style: var(--nav-list-style);
+  outline: var(--nav-list-style);
+  padding: var(--nav-padding);
+  border-top: 1px solid #ff108fdd;
+}
+
+#navbar ul {
+  height: 68%; /*esto junto con overflow-y y x hacen que parezca la barra de scroll*/
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+a {
+   text-decoration: var(--nav-list-style);
+  color: var(--nav-color-text);
+}
+
+header {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ff108fdd;
+}
+
+#navbar {
+  position: fixed;
+  width:300px;
+  min-width: 290;
+  height: 100%;
+  top: 0px; /*p q lo ubique bien arriba*/
+    left: 0px; /*p q lo ubique bien a la izq*/
+  border-right: solid;
+  border-color: #ff108fdd;
+  margin: 0px;
+}
+
+#navbar header {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+#main-doc {
+  margin-left: 310px;
+  position: absolute;
+  padding: 10px;
+}
+
+@media (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    width: 100%;
+    max-height: 275px;
+  }
+  #main-doc {
+  margin-left: 0px;
+  position: relative;
+  margin-top: 300px;
+}
+}
